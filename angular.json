@@ -23,6 +23,7 @@
               "src/assets"
             ],
             "styles": [
+              "../Archives-of-the-Beholder/node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": [],

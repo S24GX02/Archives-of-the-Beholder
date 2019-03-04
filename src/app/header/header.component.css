@@ -1,0 +1,83 @@
+.navstyle{
+    background-color: #3E3E3E;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    height: 6em;
+}
+
+input{
+    border: none;
+    color: #8C8C8C;
+    background-color: transparent;
+    font-size: 1.20em;
+    font-family: 'montserratlight';
+}
+
+.playerimage{
+    display: inline-block;
+    width: 40px;
+    margin-top: 5px;
+}
+
+.inputdiv{
+    display: inline-block;
+}
+
+.littleletters{
+    font-size: 0.5em;
+}
+
+
+input:focus{
+    outline: none;
+}
+
+.divbar{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin: 0px;
+}
+
+li{
+    padding-top: 8px;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+h3{
+    display: inline-block;
+    font-family: 'my_fontregular';
+    font-size: 1.75em;
+}
+
+a{
+    color: #fff;
+    font-family: 'montserratlight';
+}
+
+li a:hover{
+    background-color: transparent;
+}
+
+.nav li a{
+    padding: 15px 5px;
+}
+.searchIcon{
+    width: 25px;
+    padding-bottom: 8px;
+    margin-right: 8px;
+}
+
+.caretIcon{
+    width: 20px;
+    margin-top: 18px;
+    margin-right: 20px;
+}
+
+.separatorIcon{
+    width: 20px;
+    padding-bottom: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
