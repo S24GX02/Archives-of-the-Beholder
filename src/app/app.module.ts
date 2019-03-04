@@ -9,6 +9,7 @@ import { NpcListComponent } from './factionsAndNpc/npc-list/npc-list.component';
 import { NpcItemComponent } from './factionsAndNpc/npc-list/npc-item/npc-item.component';
 import { FactionListComponent } from './factionsAndNpc/faction-list/faction-list.component';
 import { FactionItemComponent } from './factionsAndNpc/faction-list/faction-item/faction-item.component';
+import { ContentComponent } from './content/content.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { FactionItemComponent } from './factionsAndNpc/faction-list/faction-item
     NpcItemComponent,
     FactionListComponent,
     FactionItemComponent,
+    ContentComponent,
     
   ],
   imports: [
