@@ -1,0 +1,18 @@
+.wrapperfactions{
+    display: inline-block;
+    margin: 0px 25px 25px 25px;
+    width: 30%;
+}
+
+.wrappernpcs{
+    display: inline-block;
+    margin: 0px 15px 25px 0px;
+    width: 60%;
+}
+
+.separator3{
+    display: inline-block;
+    height: auto;
+    width: 54px;
+    margin-top: 8px;
+}

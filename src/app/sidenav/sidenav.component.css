@@ -9,6 +9,7 @@ h3{
     font-family: 'my_fontregular';
     font-size: 1.75em;
     color: #fff;
+    margin-top: 35px;
 }
 
 h4{
@@ -20,13 +21,13 @@ h4{
 
 ul{
     padding: 0px;
-    margin: 30px 0 0 -50px;
+    margin: 20px 0 0 -50px;
     list-style-type: none;
 }
 
 li{
     width: auto;
-    padding: 15px 10px 15px 50px;
+    padding: 15px 10px 10px 50px;
 }
 
 li:hover{
@@ -50,6 +51,13 @@ a:visited{
     color: #fff;
 }
 
+.copyright{
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    padding-top: 20px;
+}
+
 .icon{
     width: 35px;
     padding-bottom: 8px;
@@ -66,11 +74,14 @@ a:visited{
 
 .wrapper{
     background-color: #3E3E3E;
-    height: 100vh;
+    max-height: 100%;
+    min-height: 100vh;
     text-align: center;
     box-shadow: 5px 0px 10px 5px rgba(17, 17, 17, 0.479);
+    position: relative;
 }
 
 .separatorIcon2{
     width: 100%;
+    margin-top: 10px;
 }

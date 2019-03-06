@@ -1,0 +1,68 @@
+h5{
+    color: #fff;
+    font-family: 'montserratbold';
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+h3{
+    font-family: 'my_fontregular';
+    margin-bottom: 25px;
+    color: #fff;
+    display: inline-block;
+}
+
+.itemwrapper:hover{
+    background-color: #323232;
+    border-right: 5px solid #D8923B;
+    border-left: 5px solid #D8923B;
+    -webkit-transition: 0.25s;
+}
+
+p{
+    color: #D8923B;
+    font-family: 'montserratlight';
+}
+
+
+.plusicon{
+    width: 35px;
+    color: #D8923B;
+    display: inline-block;
+    float: right;
+    margin: 15px 0;
+}
+
+.whitetext{
+    color: #fff;
+    margin-top: 15px;
+}
+
+.itemwrapper{
+    background-color: #3E3E3E;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+
+}
+
+.titlebar{
+    background-color: #3E3E3E;
+    padding: 15px 20px;
+
+}
+
+.content{
+    background-color: #323232;
+    padding: 20px 30px;
+}
+
+.left{
+    float: left;
+    text-align: left;
+}
+
+.right{
+    float: right;
+    text-align: right
+}
