@@ -1,0 +1,58 @@
+
+h5{
+    color: #fff;
+    font-family: 'montserratbold';
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+p{
+    color: #D8923B;
+    font-family: 'montserratlight';
+}
+
+.leftcontent{
+    float: left;
+    display: inline-block;
+    padding: 5px 5px;
+    width: 33%;
+}
+
+.middlecontent{
+    margin: auto;
+    padding: 5px 5px;
+    width: 33%;
+    text-align: center;
+    display: inline-block;
+}
+
+.rightcontent{
+    padding: 5px 5px;
+    width: 33%;
+    float: right;
+    text-align: right;
+    display: inline-block;
+
+}
+
+.itemwrapper{
+    background-color: #323232;
+    border: none;
+    border-radius: 0;
+
+}
+
+.itemwrapper:hover{
+    background-color: #323232;
+    border-right: 5px solid #D8923B;
+    border-left: 5px solid #D8923B;
+    -webkit-transition: 0.25s;
+}
+
+.itemwrapper:focus{
+    background-color: #323232;
+    border-right: 5px solid #D8923B;
+    border-left: 5px solid #D8923B;
+    -webkit-transition: 0.25s;
+}
+

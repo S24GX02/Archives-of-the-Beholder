@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Npc } from './models/npc.model';
 
 @Component({
   selector: 'app-factions-and-npc',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FactionsAndNpcComponent implements OnInit {
 
+  selectedNpc: Npc;
+  showAddSection = true;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggleAdd(){
+    this.showAddSection = false;
   }
 
 }

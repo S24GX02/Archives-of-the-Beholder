@@ -2,6 +2,25 @@
     <app-faction-list></app-faction-list>
 </div>
 <img src="../../assets/icons/Separator-3.svg" class="separator3 col-xs-1">
+
 <div class="wrappernpcs col-xs-7">
-  <app-npc-list></app-npc-list>
+  <h3>NPC's</h3>
+    <a href="" (click)="toggleAdd()"><img src="../../../assets/icons/Plus.svg" class="plusicon"></a>
+</div>
+
+<div class="wrapperadd col-xs-7" *ngIf="showAddSection">
+  <app-addnpc></app-addnpc>
+</div>
+
+
+<div class="wrappernpcs col-xs-7">
+  <app-npc-list (npcWasSelected)="selectedNpc = $event"></app-npc-list>
+</div>
+
+
+<div class="wrapperdetail col-xs-7">
+  <app-npcdetail *ngIf="selectedNpc; else infoText" [npc]="selectedNpc"></app-npcdetail>
+  <ng-template #infoText>
+    <p>Please select an npc</p>
+  </ng-template>
 </div>

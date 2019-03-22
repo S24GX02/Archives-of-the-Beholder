@@ -6,6 +6,18 @@
 
 .wrappernpcs{
     display: inline-block;
+    margin: 0px 15px 0px 0px;
+    width: 60%;
+}
+
+.wrapperdetail{
+    display: inline-block;
+    margin: 25px 15px 0px 0px;
+    width: 60%;
+}
+
+.wrapperadd{
+    display: inline-block;
     margin: 0px 15px 25px 0px;
     width: 60%;
 }
@@ -15,4 +27,20 @@
     height: auto;
     width: 54px;
     margin-top: 8px;
+}
+
+h3{
+    font-family: 'my_fontregular';
+    margin-bottom: 25px;
+    color: #fff;
+    display: inline-block;
+}
+
+
+.plusicon{
+    width: 35px;
+    color: #D8923B;
+    display: inline-block;
+    float: right;
+    margin: 15px 0;
 }

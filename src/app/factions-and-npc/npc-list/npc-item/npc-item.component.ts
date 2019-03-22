@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {Npc} from '../../models/npc.model';
+
 
 @Component({
   selector: 'app-npc-item',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NpcItemComponent implements OnInit {
 
+  @Input() npc: Npc;
+
+  @Output() npcSelected = new EventEmitter<void>();
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  onNpcSelected(){
+    this.npcSelected.emit();
+  }
+
 
 }

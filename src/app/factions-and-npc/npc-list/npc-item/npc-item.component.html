@@ -1,3 +1,14 @@
-<p>
-  npc-item works!
-</p>
+<a href="#" class="list-group-item clearfix itemwrapper" (click)="onNpcSelected()">
+  <div class="leftcontent">
+    <h5 class="">{{ npc.name }}</h5>
+    <p class="">{{ npc.race }} / {{ npc.role }}</p>
+  </div>
+  <div class="middlecontent">
+      <h5 class="">Occupancy</h5>
+      <p class="">{{ npc.occupancy }}</p>
+  </div>
+  <div class="rightcontent">
+      <h5 class="">Location</h5>
+      <p class="">{{ npc.location }}</p>
+  </div>
+</a>

@@ -1,20 +1,3 @@
-<div class="">
-  <div>
-    <h3>NPC's</h3>
-    <a href=""><img src="../../../assets/icons/Plus.svg" class="plusicon"></a>
-  </div>
-    <a href="#" class="list-group-item clearfix itemwrapper" *ngFor="let npc of npcs">
-      <div class="leftcontent">
-        <h5 class="">{{ npc.name }}</h5>
-        <p class="">{{ npc.race }} / {{ npc.role }}</p>
-      </div>
-      <div class="middlecontent">
-          <h5 class="">Occupancy</h5>
-          <p class="">{{ npc.occupancy }}</p>
-      </div>
-      <div class="rightcontent">
-          <h5 class="">Location</h5>
-          <p class="">{{ npc.location }}</p>
-      </div>
-    </a>
-  </div>
+
+<app-npc-item *ngFor="let npcEl of npcs" [npc]="npcEl" (npcSelected)="onNpcSelected(npcEl)" (npcAdded)="onNpcAdded($event)"></app-npc-item>
+
