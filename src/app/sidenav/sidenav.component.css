@@ -51,6 +51,12 @@ a:visited{
     color: #fff;
 }
 
+.active{
+    background-color: #323232 ;
+    border-right: 5px solid #D8923B;
+    font-family: 'montserratregular';
+}
+
 .copyright{
     color: #fff;
     position: absolute;

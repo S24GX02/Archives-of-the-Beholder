@@ -1,0 +1,93 @@
+
+h5{
+    color: #fff;
+    font-family: 'montserratbold';
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+h3{
+    font-family: 'my_fontregular';
+    margin-bottom: 25px;
+    color: #fff;
+    display: inline-block;
+}
+
+p{
+    color: #D8923B;
+    font-family: 'montserratlight';
+}
+
+.leftcontent{
+    float: left;
+    display: inline-block;
+    padding: 5px 5px;
+    width: 33%;
+}
+
+.content{
+    background-color: #323232;
+    padding: 20px 30px;
+}
+
+.titlebar{
+    background-color: #3E3E3E;
+    padding: 15px 20px;
+}
+
+.whitetext{
+    color: #fff;
+}
+
+.rightcontent{
+    padding: 5px 5px;
+    width: 33%;
+    float: right;
+    text-align: right;
+    display: inline-block;
+
+}
+
+.plusicon{
+    width: 35px;
+    color: #D8923B;
+    display: inline-block;
+    float: right;
+    margin: 15px 0;
+}
+
+.contentwrapper-detail{
+    display: inline-block;
+    margin: 30px 25px 25px 25px;
+}
+
+.contentwrapper-notes{
+    display: inline-block;
+    margin: 15px 15px 0px 0px;
+}
+
+
+
+.itemwrapper{
+    background-color: #323232;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+}
+
+.itemwrapper:hover{
+    background-color: #323232;
+    border-right: 5px solid #D8923B;
+    border-left: 5px solid #D8923B;
+    -webkit-transition: 0.25s;
+}
+
+.itemwrapper:focus{
+    background-color: #323232;
+    border-right: 5px solid #D8923B;
+    border-left: 5px solid #D8923B;
+    -webkit-transition: 0.25s;
+}
+
+
+

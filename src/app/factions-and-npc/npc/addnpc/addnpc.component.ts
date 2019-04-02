@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, EventEmitter, Output } from '@angular/core';
-import { Npc } from '../models/npc.model';
+import { Npc } from '../../models/npc.model';
 
 @Component({
   selector: 'app-addnpc',

@@ -7,3 +7,12 @@
     margin-right: 0px;
     background-color: #646464;
 }
+
+.active a,
+.active a:hover,
+.active a:focus,
+.active a:active {
+  color: white;
+  background-color: black;
+}
+

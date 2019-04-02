@@ -1,23 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { Npc } from './models/npc.model';
+import { NpcService } from './services/npc.service';
 
 @Component({
   selector: 'app-factions-and-npc',
   templateUrl: './factions-and-npc.component.html',
-  styleUrls: ['./factions-and-npc.component.css']
+  styleUrls: ['./factions-and-npc.component.css'],
+  providers: [NpcService]
 })
 export class FactionsAndNpcComponent implements OnInit {
-
-  selectedNpc: Npc;
-  showAddSection = true;
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-  toggleAdd(){
-    this.showAddSection = false;
   }
 
 }

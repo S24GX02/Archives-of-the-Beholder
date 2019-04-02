@@ -2,6 +2,6 @@
     <div class="col-md-2 sidenav"><app-sidenav (pageSelected)="onNavigate($event)"></app-sidenav></div>
     <div class="col-md-10">
         <div class="row"><app-header></app-header></div>
-        <div class="row"><app-viewport></app-viewport></div>
+        <div class="row"><router-outlet></router-outlet></div>
     </div>
 </div>

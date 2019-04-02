@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Faction } from '../models/faction.model';
+import { Faction } from '../../models/faction.model';
 
 @Component({
   selector: 'app-faction-list',
