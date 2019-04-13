@@ -1,29 +1,65 @@
-<a href="#" class="list-group-item clearfix itemwrapper">
-  <div class="leftcontent">
-    <label for="name">Name</label>
-    <input type="text" id="name" class="form-control" #nameInput>
-  </div>
-  <div class="middlecontent">
-    <label for="class">Class</label>
-    <input type="text" id="class" class="form-control" #classInput>
-  </div>
-  <div class="rightcontent">
-    <label for="race">Race</label>
-    <input type="text" id="Race" class="form-control" #raceInput>
-  </div>
-  <div class="leftcontent">
-      <label for="description">Description</label>
-      <input type="text" id="description" class="form-control" #descriptionInput>
-    </div>
-    <div class="middlecontent">
-      <label for="occupancy">Occupancy</label>
-      <input type="text" id="occupancy" class="form-control" #occupancyInput>
-    </div>
-    <div class="rightcontent">
-      <label for="location">Location</label>
-      <input type="text" id="Location" class="form-control" #locationInput>
-    </div>
-    <div class="rightcontent">
-        <button class="btn btn-success" type="submit" (click)="onAddNpc()">Add</button>
-      </div>
-</a>
+<div class="contentwrapper-detail">
+    <a class="list-group-item clearfix itemwrapper">
+        <form (ngSubmit)="onAddNpc()">
+            <div class="titlebar clearfix">
+                <div class="leftcontent">
+                    <h4 class="">Add a new NPC</h4>
+                    <p class="">Npc's are non player characters.</p>
+                </div>
+                    <div class="rightcontent">
+                        <button type="submit" value="Submit" class="btn btn-custom" name="submit">Submit</button>
+                </div>
+            </div>
+            <div class="content clearfix">
+                <div class="form-group col-sm-4">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="John/Jane Doe" name="name" [(ngModel)]="npc.name">
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="race">Race</label>
+                    <input type="text" class="form-control" id="race" aria-describedby="racehelp" placeholder="Elven" name="race" [(ngModel)]="npc.race">
+                    <small id="racehelp" class="form-text text-muted">You can either choose a race from the PHB page 70 or fill in a homebrow race</small>
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="role">Class</label>
+                    <input type="text" class="form-control" id="role" aria-describedby="classhelp" placeholder="Barbarian" name="role" [(ngModel)]="npc.role">
+                    <small id="racehelp" class="form-text text-muted">You can either choose a class from the PHB page 70 or fill in a homebrow class</small>
+                </div>
+                <div class="form-group col-sm-1">
+                        <label for="level">Level</label>
+                        <input type="text" class="form-control" id="level" placeholder="1" name="level" [(ngModel)]="npc.level">
+                </div>
+                <div class="form-group col-sm-1">
+                        <label for="hidden">Hidden</label>
+                        <select class="form-control" id="hidden" name="hidden">
+                                <option>Yes</option>
+                                <option>No</option>
+                        </select>
+                        <small id="ishidden" class="form-text text-muted">Hide this NPC</small>
+                </div>
+                <div class="form-group col-sm-4">
+                        <label for="faction">Faction</label>
+                        <select class="form-control" id="faction" name="faction">
+                                <option>Factions Are currently not supported</option>
+                        </select>
+                        <small id="factionhelp" class="form-text text-muted">Choose a faction</small>
+                </div>
+                <div class="form-group col-sm-3">
+                        <label for="occupancy">Occupation</label>
+                        <input type="text" class="form-control" id="occupancy" placeholder="Guard" name="occupation" [(ngModel)]="npc.occupancy">
+                    </div>
+                    <div class="form-group col-sm-3">
+                            <label for="location">Location</label>
+                            <input type="text" class="form-control" id="role" placeholder="Gurmendar" name="location" [(ngModel)]="npc.location">
+                        </div>
+                <div class="form-group col-sm-4">
+                </div>
+                <div class="form-group col-sm-12">
+                        <label for="name">Backstory</label>
+                        <textarea rows="10" class="form-control" id="name" placeholder="Write a backstory for the NPC" name="backstory" [(ngModel)]="npc.backstory"></textarea>
+                </div>
+            </div>
+        </form>
+    </a>
+</div>
+

@@ -1,9 +1,72 @@
 
-h5{
+
+h4{
     color: #fff;
     font-family: 'montserratbold';
     text-transform: uppercase;
     margin-bottom: 5px;
+}
+
+.btn-custom{
+    color: #fff;
+    text-transform: uppercase;
+    background-color:#323232;
+    padding: 15px 30px;
+    font-family: 'montserratbold';
+    border-radius: 0px;
+}
+
+.btn-custom:hover{
+    color: #323232;
+    text-transform: uppercase;
+    background-color:#D8923B;
+    padding: 15px 30px;
+    font-family: 'montserratbold';
+    -webkit-transition: 0.25s;
+}
+
+textarea:focus, select:focus, input:focus{
+    border-radius: 0px;
+    border-bottom: 3px solid #d8923b;
+    box-shadow: none;
+    -webkit-transition: 0.25s;
+}
+
+textarea, input{
+    border-radius: 0px;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid #646464;
+    font-family: 'montserratlight';
+    color: #fff;
+}
+
+
+select{
+    border-radius: 0px;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid #646464;
+    font-family: 'montserratlight';
+    color: #646464;
+}
+
+
+
+label{
+    color: #fff;
+    font-family: 'montserratbold';
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+h3{
+    font-family: 'my_fontregular';
+    margin-bottom: 25px;
+    color: #fff;
+    display: inline-block;
 }
 
 p{
@@ -13,46 +76,50 @@ p{
 
 .leftcontent{
     float: left;
-    display: inline-block;
+    width: 30%;
     padding: 5px 5px;
-    width: 33%;
+}
+
+.rightcontent{
+    padding: 15px 15px;
+    float: right;
 }
 
 .middlecontent{
     margin: auto;
     padding: 5px 5px;
-    width: 33%;
-    text-align: center;
+    width: 30%;
     display: inline-block;
 }
 
-.rightcontent{
-    padding: 5px 5px;
-    width: 33%;
-    float: right;
-    text-align: right;
-    display: inline-block;
+.content{
+    background-color: #323232;
+    padding: 20px 15px;
+}
 
+.titlebar{
+    background-color: #3E3E3E;
+    padding: 15px 20px;
+}
+
+.whitetext{
+    color: #fff;
+}
+
+.contentwrapper-detail{
+    display: inline-block;
+    margin: 30px 25px 25px 50px;
+    width: 93%;
+}
+
+.contentwrapper-notes{
+    display: inline-block;
+    margin: 15px 15px 0px 0px;
 }
 
 .itemwrapper{
     background-color: #323232;
     border: none;
     border-radius: 0;
-
+    padding: 0;
 }
-
-.itemwrapper:hover{
-    background-color: #323232;
-    border-right: 5px solid #D8923B;
-    border-left: 5px solid #D8923B;
-    -webkit-transition: 0.25s;
-}
-
-.itemwrapper:focus{
-    background-color: #323232;
-    border-right: 5px solid #D8923B;
-    border-left: 5px solid #D8923B;
-    -webkit-transition: 0.25s;
-}
-

@@ -1,6 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Npc } from '../../models/npc.model';
 import { NpcService } from '../../services/npc.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-npc-list',
@@ -15,8 +16,12 @@ export class NpcListComponent implements OnInit {
   constructor(private npcService: NpcService) { }
 
   ngOnInit() {
-
-    this.npcs = this.npcService.getNpcs();
+    this.npcService.getNpcs().subscribe(npcs => {
+      console.log(npcs);
+      this.npcs = npcs;
+    })
+    
+    //this.npcs = this.npcService.getNpcs();
   }
 
 

@@ -6,6 +6,8 @@ import { ItemsComponent } from './items/items.component';
 import { OverviewComponent } from './overview/overview.component';
 import { MainFactionsAndNpcComponent } from './factions-and-npc/main-factions-and-npc/main-factions-and-npc.component';
 import { NpcDetailComponent } from './factions-and-npc/npc/npc-detail/npc-detail.component';
+import { AddnpcComponent } from './factions-and-npc/npc/addnpc/addnpc.component';
+import { Npc } from './factions-and-npc/models/npc.model';
 
 const routes: Routes = [
 
@@ -15,7 +17,8 @@ const routes: Routes = [
   
   { path: 'factions-and-npcs', component: FactionsAndNpcComponent, children: [
     {path: '', component: MainFactionsAndNpcComponent},
-    {path: ':id', component: NpcDetailComponent}
+    {path: ':documentId', component: NpcDetailComponent},
+    {path: 'npc/new', component: AddnpcComponent, pathMatch: 'full'}
   ]},
 
   { path: 'campaign-overview', component: OverviewComponent },

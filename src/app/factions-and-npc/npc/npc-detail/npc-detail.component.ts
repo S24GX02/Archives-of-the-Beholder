@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Npc } from '../../models/npc.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { NpcService } from '../../services/npc.service';
 
 @Component({
@@ -9,18 +9,47 @@ import { NpcService } from '../../services/npc.service';
   styleUrls: ['./npc-detail.component.css']
 })
 export class NpcDetailComponent implements OnInit {
+  documentId: string;
   npc: Npc;
-  id: number;
+  npcs: Npc[];
+  editState: boolean = false;
+  npcToEdit: Npc;
+  addnoteState: boolean =false;
 
-  constructor(private npcService: NpcService, private route: ActivatedRoute) { }
+  constructor(private npcService: NpcService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
-    const id = this.route.snapshot.params['id'];
+    const id = this.route.params['documentId'];
+    this.documentId = id;
 
-    this.id = +id;
+    this.npc = this.npcService.getNpc();
+    console.log(this.npc);
+    
+  }
 
-    this.npc = this.npcService.getNpc(this.id);
+  deleteNpc(event: Event, npc: Npc){
+    this.npcService.deleteNpc(npc);
+    this.router.navigate(['/factions-and-npcs']);
+  }
 
+  editNpc(event: Event, npc: Npc){
+    this.editState = true;
+    this.npcToEdit = npc;
+  }
+
+  updateNpc(npc: Npc){
+    this.npcService.updateNpc(npc);
+    this.router.navigate(['/factions-and-npcs']);
+  }
+
+  // Note Section
+
+  showAddNote(){
+    this.addnoteState = true;
+  }
+
+  postNote(){
+    this.addnoteState = false;
   }
 
 }

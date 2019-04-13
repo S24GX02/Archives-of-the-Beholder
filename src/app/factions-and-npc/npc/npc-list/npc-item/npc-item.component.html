@@ -1,4 +1,4 @@
-<a [routerLink]="[index]" style="cursor: pointer;"class="list-group-item clearfix itemwrapper">
+<a (click)="saveNpc(npc)" [routerLink]="[documentId]" style="cursor: pointer;"class="list-group-item clearfix itemwrapper">
   <div class="leftcontent">
     <h5 class="">{{ npc.name }}</h5>
     <p class="">{{ npc.race }} / {{ npc.role }}</p>

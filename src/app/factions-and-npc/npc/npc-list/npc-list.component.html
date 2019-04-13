@@ -1,7 +1,7 @@
 
 <app-npc-item
-*ngFor="let npcEl of npcs; let i = index"
-[npc]="npcEl"
-[index]="i">
+*ngFor="let npc of npcs; let i = index"
+[npc]="npc"
+[documentId]="npc.documentId">
 </app-npc-item>
 

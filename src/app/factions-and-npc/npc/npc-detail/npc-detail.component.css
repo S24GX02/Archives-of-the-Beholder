@@ -6,6 +6,122 @@ h5{
     margin-bottom: 5px;
 }
 
+.details{
+    background-color: #646464;
+    margin: 30px 30px 15px 0px;
+}
+
+textarea:focus, select:focus, input:focus{
+    border-radius: 0px;
+    border-bottom: 3px solid #d8923b;
+    box-shadow: none;
+    -webkit-transition: 0.25s;
+}
+
+textarea, input{
+    border-radius: 0px;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid #646464;
+    font-family: 'montserratlight';
+    color: #fff;
+}
+
+textarea, input{
+    border-radius: 0px;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid #646464;
+    font-family: 'montserratlight';
+    color: #fff;
+}
+
+
+select{
+    border-radius: 0px;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid #646464;
+    font-family: 'montserratlight';
+    color: #646464;
+}
+
+label{
+    color: #fff;
+    font-family: 'montserratbold';
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.btn-custom-delete{
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #323232;
+    padding: 15px 30px;
+    font-family: 'montserratbold';
+    border-radius: 0px;
+}
+
+.btn-custom-delete:hover{
+    color: #fff;
+    text-transform: uppercase;
+    background-color:#a80f0f;
+    padding: 15px 30px;
+    font-family: 'montserratbold';
+    -webkit-transition: 0.25s;
+}
+
+.btn-custom{
+    color: #fff;
+    text-transform: uppercase;
+    background-color:#323232;
+    padding: 15px 30px;
+    font-family: 'montserratbold';
+    border-radius: 0px;
+}
+
+.btn-addmargin{
+    margin-right: 15px;
+}
+
+.btn-custom:hover{
+    color: #323232;
+    text-transform: uppercase;
+    background-color:#D8923B;
+    padding: 15px 30px;
+    font-family: 'montserratbold';
+    -webkit-transition: 0.25s;
+}
+
+.char-details{
+    margin-top: 15px;
+}
+
+.littlespace{
+    margin-bottom: 15px;
+}
+
+h4{
+    color: #fff;
+    font-family: 'montserratbold';
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+
+.h4font{
+    font-family: 'my_fontregular';
+    color: #fff;
+    display: inline-block;
+}
+.addMargin{
+    margin: 30px 15px 0px 25px;
+
+}
+
 h3{
     font-family: 'my_fontregular';
     margin-bottom: 25px;
@@ -49,11 +165,26 @@ p{
 }
 
 .plusicon{
+    cursor: pointer;
     width: 35px;
     color: #D8923B;
     display: inline-block;
     float: right;
     margin: 15px 0;
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+          transition:         transform .5s ease-in-out;
+}
+
+.plusicon:hover{
+    -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+
+.contentwrapper-editsection{
+    display: inline-block;
+    margin: 30px 25px 25px 50px;
+    width: 93%;
 }
 
 .contentwrapper-detail{
@@ -65,8 +196,6 @@ p{
     display: inline-block;
     margin: 15px 15px 0px 0px;
 }
-
-
 
 .itemwrapper{
     background-color: #323232;

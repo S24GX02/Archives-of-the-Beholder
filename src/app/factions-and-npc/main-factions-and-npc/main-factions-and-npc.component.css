@@ -43,4 +43,11 @@ h3{
     display: inline-block;
     float: right;
     margin: 15px 0;
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+          transition:         transform .5s ease-in-out;
+}
+
+.plusicon:hover{
+    -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }

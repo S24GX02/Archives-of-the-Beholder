@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {Npc} from '../../../models/npc.model';
+import { NpcService } from 'src/app/factions-and-npc/services/npc.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,10 +11,18 @@ import {Npc} from '../../../models/npc.model';
 })
 export class NpcItemComponent implements OnInit {
 @Input() npc: Npc;
-@Input() index: number;
- 
+@Input() documentId: String;
+
+constructor(private router: Router, private npcService: NpcService) { }
 
   ngOnInit() {
   }
+
+  saveNpc(npc: Npc){
+    console.log(npc);
+    this.npcService.saveNpc(npc);
+   
+  }
+  
 
 }
