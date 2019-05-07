@@ -7,6 +7,43 @@
     box-shadow: 0px 5px 10px 5px rgba(17, 17, 17, 0.479);
 }
 
+.droplink {
+    background-color: none;
+    text-decoration: none;
+    display: block;
+    color: white;
+    padding: 16px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #323232;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: #fff;
+    font-family: 'montserratbold';
+    text-transform: capitalize;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #D8923B; color: #323232; }
+  
+  .dropdown:hover .dropdown-content {display: block; float: right;}
+  
 
 input{
     border: none;
@@ -20,6 +57,28 @@ input{
     display: inline-block;
     width: 35px;
     margin-top: 8px;
+}
+
+.btn-custom{
+    color: #fff;
+    text-transform: uppercase;
+    background-color:#323232;
+    padding: 15px 30px;
+    font-family: 'montserratbold';
+    border-radius: 0px;
+}
+
+.btn-addmargin{
+    margin-right: 15px;
+}
+
+.btn-custom:hover{
+    color: #323232;
+    text-transform: uppercase;
+    background-color:#D8923B;
+    padding: 15px 30px;
+    font-family: 'montserratbold';
+    -webkit-transition: 0.25s;
 }
 
 .inputdiv{
@@ -73,7 +132,6 @@ li a:hover{
 
 .caretIcon{
     width: 20px;
-    margin-top: 18px;
     margin-right: 20px;
 }
 

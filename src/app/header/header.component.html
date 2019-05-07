@@ -5,17 +5,33 @@
       <img src="../../assets/icons/Separator-1.svg" class="separatorIcon">
       <img src="../../assets/icons/Search-Icon.svg" class="searchIcon">
       <div class="inputdiv"><input type="text" placeholder="Type to search"></div>
-      <ul class="nav navbar-nav navbar-right">
+      <ul *ngIf="!isUserLoggedIn; else loginFeatures" class="nav navbar-nav navbar-right">
         <li>
           <img src="../../assets/icons/PlayerImage.png" class="playerimage">
         </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle playername" role="button">Player Name</a>
-        </li>
-        <li class="dropdown">
-            <img src="../../assets/icons/Caret.svg" class="caretIcon">
-        </li>
+        <div class="dropdown">
+          <a class="droplink playername" role="button">{{currentLoggedInUser}}</a>
+          <div class="dropdown-content">
+            <a (click)="logoutPressed()">LOGOUT</a>
+            <a>PROFILE</a>
+          </div>
+        </div>
+        <img src="../../assets/icons/Caret.svg" class="caretIcon">
       </ul>
+      <ng-template #loginFeatures>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <button routerLink="/login" type="button" value="" class="btn btn-custom" name="login">Login</button>
+          </li>
+          <li class="dropdown">
+            <button routerLink="/register" type="button" value="" class="btn btn-custom" name="register">Register</button>
+          </li>
+          <li class="dropdown">
+              
+          </li>
+        </ul>
+      </ng-template>
+      
     </div>
   </div>
 </nav>

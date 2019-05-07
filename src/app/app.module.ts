@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 import { environment } from '../environments/environment';
 
@@ -23,6 +24,8 @@ import { OverviewComponent } from './overview/overview.component';
 import { MainFactionsAndNpcComponent } from './factions-and-npc/main-factions-and-npc/main-factions-and-npc.component';
 import { NpcDetailComponent } from './factions-and-npc/npc/npc-detail/npc-detail.component';
 import { FormsModule } from "@angular/forms";
+import { RegisterComponent } from './login-and-register/register/register.component';
+import { LoginComponent } from './login-and-register/login/login.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,8 @@ import { FormsModule } from "@angular/forms";
     OverviewComponent,
     MainFactionsAndNpcComponent,
     NpcDetailComponent,
+    RegisterComponent,
+    LoginComponent,
     
   ],
   imports: [
@@ -50,7 +55,7 @@ import { FormsModule } from "@angular/forms";
     AngularFirestoreModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AngularFireAuth],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

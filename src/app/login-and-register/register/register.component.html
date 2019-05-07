@@ -1,0 +1,48 @@
+<div class="contentwrapper-detail col-sm-5">
+  <a class="list-group-item clearfix itemwrapper">
+      <form #formData='ngForm' (ngSubmit)="onSubmit()">
+          <div class="titlebar clearfix">
+            <div class="">
+              <h4 class="">New to the archives?</h4>
+              <p>Register Here.</p>
+            </div>
+          </div>
+          <div class="content clearfix">
+              <div class="form-group addmargin">
+                <label for="username">username</label>
+                <input type="text" class="form-control" id="username" placeholder="TheLegend27" name="username" [(ngModel)]="username" required>
+              </div>
+              <div class="form-group col-xs-6 addmargin lessmargin">
+                <label for="firstname">Firs Name</label>
+                <input type="text" class="form-control" id="firstname" placeholder="John" name="firstname" [(ngModel)]="firstName">
+              </div>
+              <div class="form-group  col-xs-6 addmarginleft">
+                <label for="firstname">Last Name</label>
+                <input type="text" class="form-control" id="lastname" placeholder="Doe" name="lastname" [(ngModel)]="lastName">
+              </div>
+            <div class="form-group addmargin">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="john.doe@email.com" name="email" [(ngModel)]="email" required>
+            </div>
+            <div class="form-group addmargin">
+              <label for="password">password</label>
+              <input type="password" class="form-control" id="password" placeholder="password" name="password" [(ngModel)]="password" required>
+            </div>
+            <div class="form-group">
+                <label for="passwordconfirm">confirm password</label>
+                <input type="password" class="form-control" id="passwordconfirm" placeholder="password" name="passwordconfirm" [(ngModel)]="passwordConfirm" required>
+              </div>
+          </div>
+          <div class="titlebar clearfix">
+            <span class="error" *ngIf="error" [@fallIn]='state'>{{ error }}</span>
+            <div class="leftcontent">
+              <button type="submit" [disabled]="!formData.valid" value="Submit" class="btn btn-custom" name="submit">Register</button>
+            </div>
+            <div class="rightcontent">
+                <img src="../../assets/icons/googlebtn/google-light-normal.svg" class="googleIcon">
+            </div>
+          </div>
+      </form>
+  </a>
+</div>
+

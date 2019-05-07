@@ -8,11 +8,17 @@ import { MainFactionsAndNpcComponent } from './factions-and-npc/main-factions-an
 import { NpcDetailComponent } from './factions-and-npc/npc/npc-detail/npc-detail.component';
 import { AddnpcComponent } from './factions-and-npc/npc/addnpc/addnpc.component';
 import { Npc } from './factions-and-npc/models/npc.model';
+import { RegisterComponent } from './login-and-register/register/register.component';
+import { LoginComponent } from './login-and-register/login/login.component';
 
 const routes: Routes = [
 
+  //Login & Register Routes.
+  { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
+
   //Campaign Routes
-  { path: '', redirectTo: '/overview', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
 
   
   { path: 'factions-and-npcs', component: FactionsAndNpcComponent, children: [
@@ -30,6 +36,7 @@ const routes: Routes = [
   { path: 'mapview', component: OverviewComponent },
 
   { path: 'timeline', component: OverviewComponent },
+
 
   // Player Routes
   { path: 'items', component: ItemsComponent },
