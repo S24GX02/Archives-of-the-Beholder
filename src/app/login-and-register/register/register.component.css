@@ -74,6 +74,11 @@ p{
     font-family: 'montserratlight';
 }
 
+.errormessage{
+    color: #a80f0f;
+    text-transform: uppercase;
+}
+
 .leftcontent{
     float: left;
     width: 30%;

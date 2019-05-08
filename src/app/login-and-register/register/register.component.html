@@ -10,31 +10,32 @@
           <div class="content clearfix">
               <div class="form-group addmargin">
                 <label for="username">username</label>
-                <input type="text" class="form-control" id="username" placeholder="TheLegend27" name="username" [(ngModel)]="username" required>
+                <input type="text" class="form-control" id="username" placeholder="TheLegend27" name="username" [(ngModel)]="user.userName" required>
               </div>
               <div class="form-group col-xs-6 addmargin lessmargin">
                 <label for="firstname">Firs Name</label>
-                <input type="text" class="form-control" id="firstname" placeholder="John" name="firstname" [(ngModel)]="firstName">
+                <input type="text" class="form-control" id="firstname" placeholder="John" name="firstname" [(ngModel)]="user.firstName">
               </div>
               <div class="form-group  col-xs-6 addmarginleft">
                 <label for="firstname">Last Name</label>
-                <input type="text" class="form-control" id="lastname" placeholder="Doe" name="lastname" [(ngModel)]="lastName">
+                <input type="text" class="form-control" id="lastname" placeholder="Doe" name="lastname" [(ngModel)]="user.lastName">
               </div>
             <div class="form-group addmargin">
               <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="john.doe@email.com" name="email" [(ngModel)]="email" required>
+              <input type="email" class="form-control" id="email" placeholder="john.doe@email.com" name="email" [(ngModel)]="user.email" required>
             </div>
             <div class="form-group addmargin">
               <label for="password">password</label>
               <input type="password" class="form-control" id="password" placeholder="password" name="password" [(ngModel)]="password" required>
             </div>
             <div class="form-group">
-                <label for="passwordconfirm">confirm password</label>
-                <input type="password" class="form-control" id="passwordconfirm" placeholder="password" name="passwordconfirm" [(ngModel)]="passwordConfirm" required>
+                <label for="passwordConfirm">confirm password</label>
+                <input type="password" class="form-control" id="passwordConfirm" placeholder="password" name="passwordConfirm" [(ngModel)]="passwordConfirm" required>
               </div>
           </div>
           <div class="titlebar clearfix">
             <div class="leftcontent">
+              <p class="errormessage">{{errorMessage}}</p>
             </div>
             <div class="rightcontent">
               <button type="submit" [disabled]="!formData.valid" value="Submit" class="btn btn-custom" name="submit">Register</button>

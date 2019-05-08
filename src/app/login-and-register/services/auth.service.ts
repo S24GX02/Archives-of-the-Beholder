@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-  UserId =this.afAuth.authState.pipe(map(authState => authState.uid));
+  UserId = this.afAuth.authState.pipe(map(authState => authState.uid));
   UserLoggidIn: boolean = false;
 
   constructor(private router: Router, public afAuth: AngularFireAuth) { }
@@ -31,8 +31,16 @@ export class AuthService {
     this.router.navigate(['/login']);
   }
 
+  /* passwordReset(email){
+    this.afAuth.auth.reset
+  } */
+
   getUserState(){
     return this.UserLoggidIn;
+  }
+
+  getUserUid(){
+    return this.UserId;
   }
 
 }

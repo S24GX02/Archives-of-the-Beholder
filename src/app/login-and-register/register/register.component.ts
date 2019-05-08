@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
+import { UserService } from '../services/user.service';
+import { User } from '../models/user.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -8,16 +11,36 @@ import { AuthService } from '../services/auth.service';
 })
 export class RegisterComponent implements OnInit {
 
-  email:string;
-  password:string;
-  
-  constructor(private authService: AuthService) { }
+  email: string;
+  password: string;
+  passwordConfirm: string;
+  errorMessage: string;
 
+  user: User ={
+    userName: '',
+    firstName:'',
+    lastName:'',
+    email: '',
+  }
+  
+  constructor(private authService: AuthService, public userService: UserService, public router: Router) {
+   }
+
+  
   ngOnInit() {
   }
 
   onSubmit(){
-    this.authService.registerNewUser(this.email,this.password);
-    this.email = this.password = '';
+    if(this.password != this.passwordConfirm){
+      console.log(this.password, this.passwordConfirm);
+      this.passwordConfirm = this.password = '';
+      this.errorMessage = "The passwords didn't match, please try again."
+      return this.errorMessage;
+    } else{
+      this.authService.registerNewUser(this.user.email,this.password);
+      this.email = this.password = '';
+      this.userService.addUser(this.user);
+      this.router.navigate(['/campaign-overview']);
+    }
   }
 }

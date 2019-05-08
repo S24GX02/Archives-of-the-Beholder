@@ -27,6 +27,8 @@ import { FormsModule } from "@angular/forms";
 import { RegisterComponent } from './login-and-register/register/register.component';
 import { LoginComponent } from './login-and-register/login/login.component';
 import { PasswordresetComponent } from './login-and-register/passwordreset/passwordreset.component';
+import { NpcService } from './factions-and-npc/services/npc.service';
+import { UserService } from './login-and-register/services/user.service';
 
 @NgModule({
   declarations: [
@@ -57,7 +59,7 @@ import { PasswordresetComponent } from './login-and-register/passwordreset/passw
     AngularFirestoreModule,
     FormsModule
   ],
-  providers: [AngularFireAuth],
+  providers: [AngularFireAuth, NpcService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
