@@ -5,7 +5,7 @@
       <img src="../../assets/icons/Separator-1.svg" class="separatorIcon">
       <img src="../../assets/icons/Search-Icon.svg" class="searchIcon">
       <div class="inputdiv"><input type="text" placeholder="Type to search"></div>
-      <ul *ngIf="!isUserLoggedIn; else loginFeatures" class="nav navbar-nav navbar-right">
+      <ul *ngIf=" checkUserState(); else loginFeatures" class="nav navbar-nav navbar-right">
         <li>
           <img src="../../assets/icons/PlayerImage.png" class="playerimage">
         </li>

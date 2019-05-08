@@ -34,12 +34,10 @@
               </div>
           </div>
           <div class="titlebar clearfix">
-            <span class="error" *ngIf="error" [@fallIn]='state'>{{ error }}</span>
             <div class="leftcontent">
-              <button type="submit" [disabled]="!formData.valid" value="Submit" class="btn btn-custom" name="submit">Register</button>
             </div>
             <div class="rightcontent">
-                <img src="../../assets/icons/googlebtn/google-light-normal.svg" class="googleIcon">
+              <button type="submit" [disabled]="!formData.valid" value="Submit" class="btn btn-custom" name="submit">Register</button>
             </div>
           </div>
       </form>

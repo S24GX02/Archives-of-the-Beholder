@@ -26,6 +26,7 @@ import { NpcDetailComponent } from './factions-and-npc/npc/npc-detail/npc-detail
 import { FormsModule } from "@angular/forms";
 import { RegisterComponent } from './login-and-register/register/register.component';
 import { LoginComponent } from './login-and-register/login/login.component';
+import { PasswordresetComponent } from './login-and-register/passwordreset/passwordreset.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { LoginComponent } from './login-and-register/login/login.component';
     NpcDetailComponent,
     RegisterComponent,
     LoginComponent,
+    PasswordresetComponent,
     
   ],
   imports: [

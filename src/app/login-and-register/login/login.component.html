@@ -1,6 +1,6 @@
 <div class="contentwrapper-detail col-sm-5">
   <a class="list-group-item clearfix itemwrapper">
-      <form (ngSubmit)="onAddNpc()">
+      <form (ngSubmit)="onSubmit()">
           <div class="titlebar clearfix">
             <div class="leftcontent">
               <h4 class="">Please log in!</h4>
@@ -10,11 +10,11 @@
           <div class="content">
             <div class="form-group addmargin">
               <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="john.doe@email.com" name="email">
+              <input type="email" class="form-control" id="email" placeholder="john.doe@email.com" name="email" [(ngModel)]="email" required>
             </div>
             <div class="form-group addmargin">
               <label for="password">password</label>
-              <input type="password" class="form-control" id="password" placeholder="password" name="password" >
+              <input type="password" class="form-control" id="password" placeholder="password" name="password" [(ngModel)]="password" required>
             </div>
             <div class="form-group">
               <p><a routerLink="/register" href="">Not registered yet?</a></p>
@@ -22,10 +22,9 @@
           </div>
           <div class="titlebar clearfix">
             <div class="leftcontent">
-              <button type="submit" value="Submit" class="btn btn-custom" name="submit">Login</button>
             </div>
             <div class="rightcontent">
-                <img src="../../assets/icons/googlebtn/google-light-normal.svg" class="googleIcon">
+              <button type="submit" value="Submit" class="btn btn-custom" name="submit">Login</button>
             </div>
           </div>
       </form>

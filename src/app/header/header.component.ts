@@ -7,25 +7,26 @@ import { AuthService } from '../login-and-register/services/auth.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  userState: boolean;
   currentLoggedInUser;
-  isUserLoggedIn:boolean = false;
 
   constructor(public authService: AuthService) {
     this.authService.afAuth.authState.subscribe(user => {
       if(user) this.currentLoggedInUser=user.uid;
-      console.log(this.currentLoggedInUser);
-      this.isUserLoggedIn= true;
   });
 }
 
   ngOnInit() {
-    console.log(this.isUserLoggedIn);
+    console.log(this.currentLoggedInUser);
   }
 
   logoutPressed(){
     this.authService.logoutUser();
-    this.isUserLoggedIn = false;
+  }
+
+  checkUserState(){
+    this.userState = this.authService.getUserState();
+    return this.userState;
   }
 
 }
