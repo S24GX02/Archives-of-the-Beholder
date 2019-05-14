@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit {
   passwordConfirm: string;
   errorMessage: string;
 
-  user: User ={
+  userdetails: User ={
     userName: '',
     firstName:'',
     lastName:'',
@@ -32,15 +32,12 @@ export class RegisterComponent implements OnInit {
 
   onSubmit(){
     if(this.password != this.passwordConfirm){
-      console.log(this.password, this.passwordConfirm);
       this.passwordConfirm = this.password = '';
       this.errorMessage = "The passwords didn't match, please try again."
       return this.errorMessage;
     } else{
-      this.authService.registerNewUser(this.user.email,this.password);
-      this.email = this.password = '';
-      this.userService.addUser(this.user);
-      this.router.navigate(['/campaign-overview']);
+      this.authService.registerNewUser(this.userdetails, this.password);
+      this.password = this.passwordConfirm = '';
     }
   }
 }

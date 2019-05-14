@@ -29,6 +29,7 @@ import { LoginComponent } from './login-and-register/login/login.component';
 import { PasswordresetComponent } from './login-and-register/passwordreset/passwordreset.component';
 import { NpcService } from './factions-and-npc/services/npc.service';
 import { UserService } from './login-and-register/services/user.service';
+import { CampaigndetailsComponent } from './overview/campaigndetails/campaigndetails.component';
 
 @NgModule({
   declarations: [
