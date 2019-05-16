@@ -1,0 +1,41 @@
+<div *ngIf="userHasCampaign else createcampaign">
+    <div class="wrapperleft col-sm-6">
+      <div>
+        <h3>Campaign Name</h3>
+        <a><img src="../../../assets/icons/Plus.svg" class="plusicon"/></a>
+        <p class="campaigndescription">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim
+          ante turpis, eget consequat est posuere non. Proin vel velit mollis,
+          euismod enim quis, facilisis sapien. Curabitur suscipit, dui posuere
+          faucibus facilisis, velit urna luctus ex, sit amet elementum enim tellus
+          id sem. Pellentesque rutrum mauris et erat congue ultrices. Praesent id
+          massa ac arcu imperdiet blandit et nec nisi. Nulla aliquam elit ut massa
+          bibendum, in fermentum nisl vehicula. Pellentesque habitant morbi
+          tristique senectus et netus et malesuada fames ac turpis egestas. Nunc
+          ornare mi ut lacus commodo euismod. Aenean ac nibh id libero condimentum
+          dapibus. Quisque lectus metus, ullamcorper vel cursus at, dictum in metus.
+          Phasellus scelerisque magna orci, a tincidunt odio rhoncus id. Maecenas
+          efficitur sodales sodales. Sed sit amet feugiat augue.
+        </p>
+        <button class="btn readmore ">Read More</button>
+      </div>
+      <app-campaigndetails></app-campaigndetails>
+      <app-whatsnext></app-whatsnext>
+    </div>
+  
+    <div class="wrapperright col-sm-5">
+      
+    </div>
+  </div>
+  <ng-template #createcampaign>
+    <div class="wrapperleft col-sm-6">
+      <div>
+        <h3>You haven't got a campaign yet!</h3>
+        <p class="campaigndescription">
+          Campaigns are the heart of the Archives. Please create a campaign ot get started.
+        </p>
+        <a routerLink="campaign/new"><button class="btn createCampaign">Create a campaign</button></a>
+      </div>
+    </div>
+  </ng-template>
+  

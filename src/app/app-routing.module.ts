@@ -10,6 +10,8 @@ import { AddnpcComponent } from './factions-and-npc/npc/addnpc/addnpc.component'
 import { Npc } from './factions-and-npc/models/npc.model';
 import { RegisterComponent } from './login-and-register/register/register.component';
 import { LoginComponent } from './login-and-register/login/login.component';
+import { MainOverviewComponent } from './overview/main-overview/main-overview.component';
+import { AddcampaignComponent } from './overview/addcampaign/addcampaign.component';
 
 const routes: Routes = [
 
@@ -27,7 +29,10 @@ const routes: Routes = [
     {path: 'npc/new', component: AddnpcComponent, pathMatch: 'full'}
   ]},
 
-  { path: 'campaign-overview', component: OverviewComponent },
+  { path: 'campaign-overview', component: OverviewComponent, children: [
+    {path: '', component: MainOverviewComponent},
+    {path: 'campaign/new', component: AddcampaignComponent},
+  ]},
 
   { path: 'partyview', component: OverviewComponent },
 

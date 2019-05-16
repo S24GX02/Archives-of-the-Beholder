@@ -20,6 +20,7 @@ export class AppComponent {
     this.authService.afAuth.authState.subscribe(user => {
       if(user) this.currentLoggedInUser=user.uid;
     });
+    
 
   }
 

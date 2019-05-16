@@ -30,6 +30,9 @@ import { PasswordresetComponent } from './login-and-register/passwordreset/passw
 import { NpcService } from './factions-and-npc/services/npc.service';
 import { UserService } from './login-and-register/services/user.service';
 import { CampaigndetailsComponent } from './overview/campaigndetails/campaigndetails.component';
+import { WhatsnextComponent } from './overview/whatsnext/whatsnext.component';
+import { MainOverviewComponent } from './overview/main-overview/main-overview.component';
+import { AddcampaignComponent } from './overview/addcampaign/addcampaign.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +54,10 @@ import { CampaigndetailsComponent } from './overview/campaigndetails/campaigndet
     RegisterComponent,
     LoginComponent,
     PasswordresetComponent,
+    CampaigndetailsComponent,
+    WhatsnextComponent,
+    MainOverviewComponent,
+    AddcampaignComponent,
     
   ],
   imports: [

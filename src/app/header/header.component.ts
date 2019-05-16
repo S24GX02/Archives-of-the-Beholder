@@ -16,29 +16,45 @@ export class HeaderComponent implements OnInit {
   user: Observable<User>;
 
   constructor(public authService: AuthService, public userService: UserService) {
-    this.authService.afAuth.authState.subscribe(user => {
-      if(user) this.currentLoggedInUser=user.uid;
+    /* this.authService.afAuth.authState.subscribe(user => {
+      if(user) {
+      this.currentLoggedInUser = user.uid;
       this.userService.getUser(this.currentLoggedInUser).subscribe(user => {
         if (user){
           console.log(user);
-          this.username =user.userName;
-        }
+          this.username = user.userName;
+        } 
       })
-  });
+    }
+  }); */
+  
 }
 
   ngOnInit() {
-    this.currentLoggedInUser = "";
+    this.authService.afAuth.auth.onAuthStateChanged
+    this.authService.afAuth.auth.onAuthStateChanged(user =>{
+      if (user) {
+        this.currentLoggedInUser = user.uid;
+        this.userState = true;
+        this.userService.getUser(this.currentLoggedInUser).subscribe(user =>{
+          if (user){
+            this.username = user.userName;
+          }
+        });
+      } else {
+        this.userState = false;
+        this.currentLoggedInUser = null;
+      }
+    })
   }
 
   logoutPressed(){
     this.authService.logoutUser();
+    this.userState = false;
   }
 
   checkUserState(){
-    this.userState = this.authService.getUserState();
     return this.userState;
-    console.log(this.currentLoggedInUser);
   }
 
 }

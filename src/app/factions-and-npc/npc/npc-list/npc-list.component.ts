@@ -19,9 +19,7 @@ export class NpcListComponent implements OnInit {
     this.npcService.getNpcs().subscribe(npcs => {
       console.log(npcs);
       this.npcs = npcs;
-    })
-    
-    //this.npcs = this.npcService.getNpcs();
+    });
   }
 
 
