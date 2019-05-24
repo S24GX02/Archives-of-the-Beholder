@@ -1,0 +1,126 @@
+.wrapperleft{
+    display: inline-block;
+    margin: 0px 25px 25px 50px;
+    width: 95%;
+}
+
+.addMargin{
+    margin: 30px 15px 0px 25px;
+}
+
+
+.wrapperright{
+    display: inline-block;
+    margin: 0px 15px 0px 0px;
+    width: 60%;
+}
+
+.campaigndescription{
+    color: #fff;
+    font-family: 'montserratregular';
+    font-size: 1em;
+    text-align: justify;
+}
+
+.readmore{
+    float: right;
+    color: #fff;
+    text-transform: uppercase;
+    background-color:#323232;
+    border: 2px solid #323232;
+    padding: 10px 30px;
+    font-family: 'montserratbold';
+    border-radius: 0px;
+}
+
+.readmore:hover{
+    text-transform: uppercase;
+    border: 2px solid #D8923B;
+    padding: 10px 30px;
+    font-family: 'montserratbold';
+    -webkit-transition: 0.25s;
+}
+
+
+.createCampaign{
+    color: #fff;
+    margin-top: 50px;
+    text-transform: uppercase;
+    background-color:#323232;
+    border: 2px solid #323232;
+    padding: 10px 30px;
+    font-family: 'montserratbold';
+    border-radius: 0px;
+}
+
+.createCampaign:hover{
+    text-transform: uppercase;
+    border: 2px solid #D8923B;
+    padding: 10px 30px;
+    font-family: 'montserratbold';
+    -webkit-transition: 0.25s;
+}
+
+h3{
+    font-family: 'my_fontregular';
+    margin-bottom: 25px;
+    color: #fff;
+    display: inline-block;
+}
+
+.plusicon{
+    width: 35px;
+    color: #D8923B;
+    display: inline-block;
+    float: right;
+    margin: 15px 0;
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+          transition:         transform .5s ease-in-out;
+}
+
+.plusicon:hover{
+    -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.detailcontent{
+    background-color: #323232;
+    margin-top: 75px;
+    color: #fff;
+}
+
+.whatsnext-content{
+    margin: 15px 10px 20px 10px;
+    font-family: 'montserratregular';
+    font-size: 1em;
+    text-align: justify;
+}
+
+.whatsnext{
+    background-color: #323232;
+    margin-top: 25px;
+    color: #fff;
+}
+
+.separatorIcon4-2{
+    width: 275px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+
+
+.pencilicon{
+    width: 35px;
+    color: #D8923B;
+    display: inline-block;
+    float: right;
+    margin: 15px 0;
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+          transition:         transform .5s ease-in-out;
+}
+
+.pencilicon:hover{
+    -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}

@@ -13,12 +13,12 @@ export class UserService {
   user: User;
   uid: string;
 
-  constructor(public afs: AngularFirestore) { 
-    this.userCollection = this.afs.collection("users");
+  constructor(public afs: AngularFirestore) {
+    this.userCollection = this.afs.collection('users');
   }
 
-  addUser(userdetails: User, uid: any){
-    this.afs.collection("users").doc(uid).set({
+  addUser(userdetails: User, uid: any) {
+    this.afs.collection('users').doc(uid).set({
       userName: userdetails.userName,
       firstName: userdetails.firstName,
       lastName: userdetails.lastName,
@@ -26,11 +26,11 @@ export class UserService {
     });
   }
 
-  getUser(currentLoggedInUserId: string){
-    this.userDocument = this.afs.collection("users").doc<User>(currentLoggedInUserId);
+  getUser(currentLoggedInUserId: string) {
+    this.userDocument = this.afs.collection('users').doc<User>(currentLoggedInUserId);
     this.userObservable = this.userDocument.valueChanges();
     return this.userObservable;
-    
+
   }
 
 }

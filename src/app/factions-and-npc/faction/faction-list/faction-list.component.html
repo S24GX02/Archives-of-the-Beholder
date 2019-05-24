@@ -1,18 +1,5 @@
-<div class="">
-    <a href="#" class="list-group-item clearfix itemwrapper" *ngFor="let faction of factions">
-        <div class="titlebar clearfix">
-            <div class="left">
-                <h5 class="">{{ faction.name }}</h5>
-                <p class="">{{ faction.type }}</p>
-            </div>
-            <div class="right">
-                <h5 class="">Members</h5>
-                <p class="">{{ faction.members }}</p>
-            </div>
-        </div>
-        <div class="content clearfix">
-                <h5 class="">Description</h5>
-                <p class="whitetext">{{ faction.description }}</p>
-        </div>
-      </a>
-</div>
+<app-faction-item
+*ngFor="let faction of factions; let i = index"
+[faction]="faction"
+[documentId]="faction.documentId">
+</app-faction-item>

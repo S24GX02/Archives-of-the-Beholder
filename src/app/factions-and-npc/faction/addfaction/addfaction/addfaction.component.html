@@ -1,0 +1,37 @@
+<div class="contentwrapper-detail">
+  <a class="list-group-item clearfix itemwrapper">
+      <form (ngSubmit)="onAddFaction()">
+          <div class="titlebar clearfix">
+              <div class="leftcontent">
+                  <h4 class="">Add a new Faction</h4>
+                  <p class="">Factions are groups that exist in the world.</p>
+              </div>
+                  <div class="rightcontent">
+                      <button type="submit" value="Submit" class="btn btn-custom" name="submit">Submit</button>
+              </div>
+          </div>
+          <div class="content clearfix">
+              <div class="form-group col-sm-4">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="John/Jane Doe" name="name" [(ngModel)]="faction.name">
+              </div>
+              <div class="form-group col-sm-4">
+                  <label for="type">Type</label>
+                  <input type="text" class="form-control" id="type" aria-describedby="typehelp" placeholder="Elven" name="type" [(ngModel)]="faction.type">
+                  <small id="typehelp" class="form-text text-muted">Factions can be guilds, cults, trade organisations, ...</small>
+              </div>
+              <div class="form-group col-sm-4">
+                  <label for="members">Members</label>
+                  <input type="text" class="form-control" id="members" aria-describedby="classhelp" placeholder="Barbarian" name="members" [(ngModel)]="faction.members">
+              </div>
+              <div class="form-group col-sm-4">
+              </div>
+              <div class="form-group col-sm-12">
+                      <label for="name">Description</label>
+                      <textarea rows="10" class="form-control" id="name" placeholder="Description/history of the campaign" name="backstory" [(ngModel)]="faction.description"></textarea>
+              </div>
+          </div>
+      </form>
+  </a>
+</div>
+

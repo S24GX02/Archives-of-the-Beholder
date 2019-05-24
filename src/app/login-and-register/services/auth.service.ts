@@ -36,10 +36,6 @@ export class AuthService {
   loginUser(email, password){
     this.afAuth.auth.signInWithEmailAndPassword(email, password);
     this.UserLoggidIn = true;
-    this.afAuth.auth.onAuthStateChanged(user => {
-      this.uid = user.uid;
-      console.log(this.uid);
-    });
     this.router.navigate(['/campaign-overview']);
   }
 

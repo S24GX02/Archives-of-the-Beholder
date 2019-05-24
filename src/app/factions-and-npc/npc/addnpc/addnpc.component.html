@@ -31,16 +31,16 @@
                 </div>
                 <div class="form-group col-sm-1">
                         <label for="hidden">Hidden</label>
-                        <select class="form-control" id="hidden" name="hidden">
-                                <option>Yes</option>
-                                <option>No</option>
+                        <select class="form-control" id="hidden" name="hidden" [(ngModel)]="npc.isHidden">
+                                <option [ngValue]=true>Yes</option>
+                                <option [ngValue]=false>No</option>
                         </select>
                         <small id="ishidden" class="form-text text-muted">Hide this NPC</small>
                 </div>
                 <div class="form-group col-sm-4">
                         <label for="faction">Faction</label>
-                        <select class="form-control" id="faction" name="faction">
-                                <option>Factions Are currently not supported</option>
+                        <select class="form-control" id="faction" name="faction" [(ngModel)]="npc.factionId">
+                            <option *ngFor="let faction of factions; let i = index" [ngValue]=faction.documentId>{{faction.name}}</option>
                         </select>
                         <small id="factionhelp" class="form-text text-muted">Choose a faction</small>
                 </div>

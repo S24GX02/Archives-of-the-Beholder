@@ -14,7 +14,7 @@ export class NpcDetailComponent implements OnInit {
   npcs: Npc[];
   editState: boolean = false;
   npcToEdit: Npc;
-  addnoteState: boolean =false;
+  addnoteState: boolean = false;
 
   constructor(private npcService: NpcService, private route: ActivatedRoute, private router: Router) { }
 

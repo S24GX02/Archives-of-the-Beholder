@@ -1,26 +1,26 @@
 <div *ngIf="userHasCampaign else createcampaign">
     <div class="wrapperleft col-sm-6">
       <div>
-        <h3>Campaign Name</h3>
-        <a><img src="../../../assets/icons/Plus.svg" class="plusicon"/></a>
+        <h3>{{campaign.campaignName}}</h3>
         <p class="campaigndescription">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dignissim
-          ante turpis, eget consequat est posuere non. Proin vel velit mollis,
-          euismod enim quis, facilisis sapien. Curabitur suscipit, dui posuere
-          faucibus facilisis, velit urna luctus ex, sit amet elementum enim tellus
-          id sem. Pellentesque rutrum mauris et erat congue ultrices. Praesent id
-          massa ac arcu imperdiet blandit et nec nisi. Nulla aliquam elit ut massa
-          bibendum, in fermentum nisl vehicula. Pellentesque habitant morbi
-          tristique senectus et netus et malesuada fames ac turpis egestas. Nunc
-          ornare mi ut lacus commodo euismod. Aenean ac nibh id libero condimentum
-          dapibus. Quisque lectus metus, ullamcorper vel cursus at, dictum in metus.
-          Phasellus scelerisque magna orci, a tincidunt odio rhoncus id. Maecenas
-          efficitur sodales sodales. Sed sit amet feugiat augue.
+          {{campaign.campaignDescription}}}
         </p>
         <button class="btn readmore ">Read More</button>
       </div>
       <app-campaigndetails></app-campaigndetails>
-      <app-whatsnext></app-whatsnext>
+      <div class="whatsnext clearfix">
+        <div class="col-sm-12">
+          <h3 class="addMargin h4font">What's Next</h3>
+          <img src="../../../../assets/icons/Pencil.svg" class="pencilicon"/>
+          <img src="../../../../assets/icons/Separator-4.svg" class="separatorIcon4-2"/>
+            <div class="whatsnext-content">
+              <h4>{{campaign.whatsNextTitle}}</h4>
+              <p>
+                {{campaign.whatsNext}}
+              </p>
+            </div>
+        </div>
+      </div>
     </div>
   
     <div class="wrapperright col-sm-5">

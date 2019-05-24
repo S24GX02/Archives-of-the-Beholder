@@ -23,7 +23,7 @@ import { AddnpcComponent } from './factions-and-npc/npc/addnpc/addnpc.component'
 import { OverviewComponent } from './overview/overview.component';
 import { MainFactionsAndNpcComponent } from './factions-and-npc/main-factions-and-npc/main-factions-and-npc.component';
 import { NpcDetailComponent } from './factions-and-npc/npc/npc-detail/npc-detail.component';
-import { FormsModule } from "@angular/forms";
+import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './login-and-register/register/register.component';
 import { LoginComponent } from './login-and-register/login/login.component';
 import { PasswordresetComponent } from './login-and-register/passwordreset/passwordreset.component';
@@ -33,6 +33,14 @@ import { CampaigndetailsComponent } from './overview/campaigndetails/campaigndet
 import { WhatsnextComponent } from './overview/whatsnext/whatsnext.component';
 import { MainOverviewComponent } from './overview/main-overview/main-overview.component';
 import { AddcampaignComponent } from './overview/addcampaign/addcampaign.component';
+import { AddfactionComponent } from './factions-and-npc/faction/addfaction/addfaction/addfaction.component';
+import { FactionDetailComponent } from './factions-and-npc/faction/faction-detail/faction-detail/faction-detail.component';
+import { CharactersComponent } from './characters/characters.component';
+import { AddcharacterComponent } from './characters/character/addcharacter/addcharacter.component';
+import { MainCharacterComponent } from './characters/main-character/main-character.component';
+import { from } from 'rxjs';
+import { CharacterListComponent } from './characters/character/character-list/character-list.component';
+import { CharacterItemComponent } from './characters/character/character-list/character-item/character-item.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +66,14 @@ import { AddcampaignComponent } from './overview/addcampaign/addcampaign.compone
     WhatsnextComponent,
     MainOverviewComponent,
     AddcampaignComponent,
-    
+    AddfactionComponent,
+    FactionDetailComponent,
+    CharactersComponent,
+    AddcharacterComponent,
+    MainCharacterComponent,
+    CharacterListComponent,
+    CharacterItemComponent,
+
   ],
   imports: [
     BrowserModule,

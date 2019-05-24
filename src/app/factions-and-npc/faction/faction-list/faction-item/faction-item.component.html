@@ -1,3 +1,16 @@
-<p>
-  faction-item works!
-</p>
+<a (click)="saveFaction(faction)" routerLink="faction/{{faction.documentId}}" class="list-group-item clearfix itemwrapper">
+    <div class="titlebar clearfix">
+        <div class="left">
+            <h5 class="">{{ faction.name }}</h5>
+            <p class="">{{ faction.type }}</p>
+        </div>
+        <div class="right">
+            <h5 class="">Members</h5>
+            <p class="">{{ faction.members }}</p>
+        </div>
+    </div>
+    <div class="content clearfix">
+            <h5 class="">Description</h5>
+            <p class="whitetext">{{ faction.description }}</p>
+    </div>
+</a>

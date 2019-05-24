@@ -1,0 +1,90 @@
+<div *ngIf="!editState; else editSection">
+  <div class="contentwrapper-detail col-sm-7">
+          <div class="titlebar clearfix">
+              <input type=hidden value="{{ faction.documentId }}">
+              <div class="leftcontent">
+                  <h5 class=""> {{ faction.name }} </h5>
+                  <p class=""> {{ faction.type }}}</p>
+              </div>  
+              <div class="rightcontent">
+                  <h5 class="">Members</h5>
+                  <p class=""> {{faction.members}} </p>
+              </div>
+          </div>
+          <div class="content clearfix">
+              <h5 class="">backstory</h5>
+              <p class="whitetext"> {{ faction.description }} </p>
+          </div>
+          <div class="titlebar clearfix">
+              <input type=hidden value="{{ faction.documentId }}">
+              <div class="leftcontent">
+              </div>  
+              <div class="rightcontent">
+                  <button type="button" value="Edit" class="btn btn-custom btn-addmargin" name="edit" (click)="editFaction($event, faction)">Edit</button>
+                  <button type="button" value="Delete" class="btn btn-custom-delete" name="delete" (click)="deleteFaction($event, faction)">Delete</button>
+              </div>
+          </div>
+      </div>
+  
+      <div class="col-sm-4 contentwrapper-notes">
+      <h3>Notes</h3>
+      <a (click)="showAddNote()"><img src="../../../assets/icons/Plus.svg" class="plusicon"></a>
+          <div *ngIf="addnoteState">
+              <div class="titlebar clearfix">
+                  <div class="leftcontent">
+                      <h5 class="">New Note</h5>
+                  </div>
+                  <div class="rightcontent">
+                      <button type="button" value="Post" class="btn btn-custom" name="post" (click)="postNote()">Post</button>
+                  </div>
+              </div>
+              <div class="content clearfix">
+                  <textarea rows="5" class="form-control" id="note" placeholder="Note content" name="note"></textarea>
+              </div>
+          </div>
+          <div>
+  
+          </div>
+      </div>
+  </div>
+  
+  <!-- This is to edit the faction -->
+  
+  <ng-template #editSection>
+      
+          <div class="contentwrapper-editsection">
+                      <form (ngSubmit)="updateFaction(faction)">
+                          <div class="titlebar clearfix">
+                              <div class="leftcontent">
+                                  <h4 class="">Edit {{ faction.name }} ID: {{faction.documentId}}</h4>
+                                  <p class="">Do not forget to save changes!</p>
+                              </div>
+                                  <div class="rightcontent">
+                                      <button type="submit" value="update Faction" class="btn btn-custom" name="update">Edit {{ faction.name }}</button>
+                              </div>
+                          </div>
+                          <div class="content clearfix">
+                              <div class="form-group col-sm-4">
+                                  <label for="name">Name</label>
+                                  <input type="text" class="form-control" id="name" placeholder="John/Jane Doe" name="name" [(ngModel)]="faction.name">
+                              </div>
+                              <div class="form-group col-sm-4">
+                                  <label for="type">Type</label>
+                                  <input type="text" class="form-control" id="type" aria-describedby="typehelp" placeholder="Elven" name="type" [(ngModel)]="faction.type">
+                              </div>
+                              <div class="form-group col-sm-4">
+                                  <label for="members">Members</label>
+                                  <input type="text" class="form-control" id="members" aria-describedby="classhelp" placeholder="Barbarian" name="members" [(ngModel)]="faction.members">
+                              </div>
+                              <div class="form-group col-sm-4">
+                              </div>
+                              <div class="form-group col-sm-12">
+                                      <label for="description">Descrition</label>
+                                      <textarea rows="10" class="form-control" id="description" placeholder="Write a backstory for the NPC" name="descriptions" [(ngModel)]="faction.description"></textarea>
+                              </div>
+                          </div>
+                      </form>
+              </div>            
+  </ng-template>  
+  
+  

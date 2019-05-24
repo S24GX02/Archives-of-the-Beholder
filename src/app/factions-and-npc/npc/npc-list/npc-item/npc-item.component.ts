@@ -18,11 +18,8 @@ constructor(private router: Router, private npcService: NpcService) { }
   ngOnInit() {
   }
 
-  saveNpc(npc: Npc){
+  saveNpc(npc: Npc) {
     console.log(npc);
     this.npcService.saveNpc(npc);
-   
   }
-  
-
 }
