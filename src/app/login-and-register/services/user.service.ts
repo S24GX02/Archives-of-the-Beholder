@@ -30,7 +30,11 @@ export class UserService {
     this.userDocument = this.afs.collection('users').doc<User>(currentLoggedInUserId);
     this.userObservable = this.userDocument.valueChanges();
     return this.userObservable;
+  }
 
+  changeActiveChar(currentLoggedInUser: string, character: string) {
+    this.userDocument = this.afs.collection('users').doc<User>(currentLoggedInUser);
+    this.userDocument.ref.update({ activeChar: character});
   }
 
 }

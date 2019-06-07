@@ -17,6 +17,7 @@ import { FactionDetailComponent } from './factions-and-npc/faction/faction-detai
 import { CharactersComponent } from './characters/characters.component';
 import { AddcharacterComponent } from './characters/character/addcharacter/addcharacter.component';
 import { MainCharacterComponent } from './characters/main-character/main-character.component';
+import { CharacterDetailComponent } from './characters/character/character-detail/character-detail.component';
 
 const routes: Routes = [
 
@@ -56,6 +57,7 @@ const routes: Routes = [
   { path: 'characters', component: CharactersComponent, children: [
     { path: '', component: MainCharacterComponent },
     { path: 'new', component: AddcharacterComponent},
+    { path: 'character/:documentId', component: CharacterDetailComponent },
   ]},
 ];
 

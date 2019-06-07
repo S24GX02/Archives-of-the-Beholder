@@ -26,6 +26,7 @@ export class AddcharacterComponent implements OnInit {
     characterHealthMax: null,
     characterHealthCurrent: null,
     userId: '',
+    userName: '',
     campaignId: ''
   };
 

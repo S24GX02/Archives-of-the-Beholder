@@ -12,6 +12,7 @@ h3{
     display: inline-block;
 }
 
+
 .itemwrapper:hover{
     background-color: #323232;
     border-right: 5px solid #D8923B;
@@ -43,7 +44,10 @@ p{
     border: none;
     border-radius: 0;
     padding: 0;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+    
+   
+    display: inline-block;
 }
 
 .titlebar{
@@ -69,7 +73,7 @@ p{
 
 .rightcontent{
     padding: 5px 5px;
-    width: 33%;
+    width: auto;
     float: right;
     text-align: right;
     display: inline-block;

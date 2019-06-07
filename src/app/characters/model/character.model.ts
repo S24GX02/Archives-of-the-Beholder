@@ -15,6 +15,7 @@ export class Character {
     public characterHealthMax: number;
     public characterHealthCurrent: number;
     public userId: string;
+    public userName: string;
     public campaignId: string;
 
     constructor(documentId: string, characterName: string, characterBackstory: string,
@@ -23,7 +24,7 @@ export class Character {
                 characterProficiencyBonus: number, characterArmorClass: number,
                 characterInitiative: number, characterSpeed: number,
                 characterXp: number, characterHealthMax: number,
-                characterHealthCurrent: number, userId: string, campaignId: string) {
+                characterHealthCurrent: number, userId: string, userName: string, campaignId: string) {
 
     this.documentId = documentId;
     this.characterName = characterName;
@@ -40,6 +41,7 @@ export class Character {
     this.characterHealthMax = characterHealthMax;
     this.characterHealthCurrent = characterHealthCurrent;
     this.userId = userId;
+    this.userName = userName;
     this.campaignId = campaignId;
     }
 

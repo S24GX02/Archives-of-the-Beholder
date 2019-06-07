@@ -1,26 +1,28 @@
-<a class="list-group-item clearfix itemwrapper col-sm-6">
-  <div>
+<a (click)="saveCharacter(character)" routerLink="character/{{character.documentId}}" class="list-group-item clearfix itemwrapper col-xs-12">
+  <div class="charitem">
+    <div>
+      <div class="titlebar clearfix">
+        <div class="left">
+          <h5 class="">{{ character.characterName }}</h5>
+          <p class="">{{ character.characterRace }} / {{ character.characterRole }}</p>
+        </div>
+        <div class="right">
+          <h5 class="">LVL: {{ character.characterLvl }}</h5>
+          <p class="">{{ character.characterXp }} / 250</p>
+        </div>
+      </div>
+      <div class="content clearfix">
+        <h5 class="">Backstory</h5>
+        <p class="whitetext">{{ character.characterBackstory }}</p>
+      </div>
+    </div>
     <div class="titlebar clearfix">
-      <div class="left">
-        <h5 class="">{{ character.characterName }}</h5>
-        <p class="">{{ character.characterRace }} / {{ character.characterRole }}</p>
+      <div class="leftcontent">
+        <p class="whitetext">Current campaign: {{ character.campaignId }}</p>
+      </div>  
+      <div class="rightcontent">
+        <button type="button" value="Delete" class="btn btn-custom-delete" name="delete" (click)="deleteCharacter($event, character)">Delete</button>
       </div>
-      <div class="right">
-        <h5 class="">LVL: {{ character.characterLvl }}</h5>
-        <p class="">{{ character.characterXp }} / 250</p>
-      </div>
-    </div>
-    <div class="content clearfix">
-      <h5 class="">Backstory</h5>
-      <p class="whitetext">{{ character.characterBackstory }}</p>
-    </div>
   </div>
-  <div class="titlebar clearfix">
-    <div class="leftcontent">
-      <p class="whitetext">Current campaign: {{ character.campaignId }}</p>
-    </div>  
-    <div class="rightcontent">
-        <button type="button" value="Delete" class="btn btn-custom-delete" name="delete" (click)="deleteCharacter($event, npc)">Delete</button>
-    </div>
 </div>
 </a>

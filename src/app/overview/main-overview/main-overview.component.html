@@ -1,7 +1,14 @@
 <div *ngIf="userHasCampaign else createcampaign">
     <div class="wrapperleft col-sm-6">
       <div>
-        <h3>{{campaign.campaignName}}</h3>
+        <h3 *ngIf="showCampaignID, else showName">{{campaign.documentId}}</h3>
+        <ng-template #showName>
+        <h3 >{{campaign.campaignName}}</h3>
+        </ng-template>
+        <button *ngIf="showCampaignID, else otherbtn" class="btn showcampaign" (click)="showCampaign()">Hide</button>
+        <ng-template #otherbtn>
+        <button class="btn showcampaign" (click)="showCampaign()">Show Campaign ID</button>
+        </ng-template>
         <p class="campaigndescription">
           {{campaign.campaignDescription}}}
         </p>
@@ -24,9 +31,21 @@
     </div>
   
     <div class="wrapperright col-sm-5">
-      
+      <h3>Players</h3>
+      <div *ngFor="let character of characters" class="list-group-item clearfix itemwrapper">
+        <div class="leftcontent">
+            <img src="../../assets/icons/PlayerImage.png" class="playerimage">
+        </div>
+        <div class="middlecontent">
+            <h5 class="">{{ character.characterName }}</h5>
+            <p class="">{{ character.characterRace }} / {{ character.characterRole }}</p>
+        </div>
+      </div>
     </div>
   </div>
+
+
+
   <ng-template #createcampaign>
     <div class="wrapperleft col-sm-6">
       <div>

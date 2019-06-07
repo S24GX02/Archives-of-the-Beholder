@@ -1,0 +1,120 @@
+<div *ngIf="!editState; else editSection">
+    <div class="contentwrapper-detail">
+    <div class="charitem">
+        <div>
+          <div class="titlebar clearfix">
+            <div class="left">
+              <h5 class="">{{ character.characterName }}</h5>
+              <p class="">{{ character.characterRace }} / {{ character.characterRole }}</p>
+            </div>
+            <div class="right">
+              <h5 class="">LVL: {{ character.characterLvl }}</h5>
+              <p class="">{{ character.characterXp }} / 250</p>
+            </div>
+          </div>
+          <div class="content clearfix">
+            <h5 class="">Backstory</h5>
+            <p class="whitetext">{{ character.characterBackstory }}</p>
+          </div>
+        </div>
+        <div class="titlebar clearfix">
+          <div class="leftcontent">
+            <p class="whitetext">Current campaign: {{ character.campaignId }}</p>
+          </div>  
+          <div class="rightcontent">
+              <button type="button" value="Edit" class="btn btn-custom btn-addmargin" name="edit" (click)="enableEdit()">Edit</button>
+            <button type="button" value="Delete" class="btn btn-custom-delete" name="delete" (click)="deleteCharacter($event, character)">Delete</button>
+          </div>
+      </div>
+    </div>
+</div>
+</div>
+
+<ng-template #editSection>
+
+    <div class="contentwrapper-detail">
+        <a class="list-group-item clearfix itemwrapper">
+            <form (ngSubmit)="editCharacter()">
+                <div class="titlebar clearfix">
+                    <div class="leftcontent">
+                        <h4 class="">Create a new playable Character</h4>
+                        <p class="">Let the creativity flow</p>
+                    </div>
+                        <div class="rightcontent">
+                            <button type="submit" value="Submit" class="btn btn-custom" name="submit">Submit</button>
+                    </div>
+                </div>
+                <div class="content clearfix">
+                    <div class="form-group col-sm-4">
+                      <label for="name">Complete name</label>
+                      <input type="text" class="form-control" id="name" placeholder="Boaty Mcboatface" name="name" [(ngModel)]="character.characterName">
+                    </div>
+                    <div class="form-group col-sm-4">
+                      <label for="race">Race</label>
+                      <input type="text" class="form-control" id="race" aria-describedby="racehelp" placeholder="Elven" name="race" [(ngModel)]="character.characterRace">
+                      <small id="racehelp" class="form-text text-muted">You can either choose a race from the PHB page 70 or fill in a homebrow race</small>
+                    </div>
+                    <div class="form-group col-sm-4">
+                      <label for="role">Class</label>
+                      <input type="text" class="form-control" id="role" aria-describedby="classhelp" placeholder="Barbarian" name="role" [(ngModel)]="character.characterRole">
+                      <small id="racehelp" class="form-text text-muted">You can either choose a class from the PHB page 70 or fill in a homebrow class</small>
+                    </div>
+                    <div class="form-group col-sm-1">
+                      <label for="level">Level</label>
+                      <input type="text" class="form-control" id="level" placeholder="1" name="level" [(ngModel)]="character.characterLvl">
+                      <small id="racehelp" class="form-text text-muted">This needs to be a number</small>
+                    </div>
+                    <div class="form-group col-sm-1">
+                      <label for="level">AC</label>
+                      <input type="text" class="form-control" id="level" placeholder="10" name="level" [(ngModel)]="character.characterArmorClass">
+                      <small id="racehelp" class="form-text text-muted">This needs to be a number</small>
+                    </div>
+                    <div class="form-group col-sm-1">
+                      <label for="level">Initiative</label>
+                      <input type="text" class="form-control" id="level" placeholder="1" name="level" [(ngModel)]="character.characterInitiative">
+                      <small id="racehelp" class="form-text text-muted">This needs to be a number</small>
+                    </div>
+                    <div class="form-group col-sm-1">
+                      <label for="level">Speed</label>
+                      <input type="text" class="form-control" id="level" placeholder="30" name="level" [(ngModel)]="character.characterSpeed">
+                      <small id="racehelp" class="form-text text-muted">This needs to be a number</small>
+                    </div>
+                    <div class="form-group col-sm-2">
+                      <label for="level">Proficiency Bonus</label>
+                      <input type="text" class="form-control" id="level" placeholder="1" name="level" [(ngModel)]="character.characterProficiencyBonus">
+                      <small id="racehelp" class="form-text text-muted">This needs to be a number</small>
+                    </div>
+                    <div class="form-group col-sm-2">
+                      <label for="level">Hit die</label>
+                      <input type="text" class="form-control" id="level" placeholder="1 d10" name="level" [(ngModel)]="character.characterHitDie">
+                    </div>
+                    <div class="form-group col-sm-2">
+                      <label for="level">Experience Points</label>
+                      <input type="text" class="form-control" id="level" placeholder="0" name="level" [(ngModel)]="character.characterXp">
+                      <small id="racehelp" class="form-text text-muted">This needs to be a number</small>
+                    </div>
+                    <div class="form-group col-sm-2">
+                      <label for="level">Max health</label>
+                      <input type="text" class="form-control" id="level" placeholder="0" name="level" [(ngModel)]="character.characterHealthMax">
+                      <small id="racehelp" class="form-text text-muted">This needs to be a number</small>
+                    </div>
+                    <div class="form-group col-sm-4">
+                    </div>
+                    <div class="form-group col-sm-12">
+                      <label for="name">Backstory</label>
+                      <textarea rows="10" class="form-control" id="name" placeholder="Write a backstory for the character" name="backstory" [(ngModel)]="character.characterBackstory"></textarea>
+                    </div>
+                </div>
+                <div class="titlebar clearfix">
+                    <div class="leftcontent">
+                        <h4 class="">current campaign</h4>
+                        <p>Ask fo the campaign ID from the owner</p>
+                        <input class="campaignInput" type="text" class="form-control" id="level" placeholder="" name="level" [(ngModel)]="character.campaignId">
+                    </div>
+                </div>
+            </form>
+        </a>
+      </div>
+
+</ng-template>
+

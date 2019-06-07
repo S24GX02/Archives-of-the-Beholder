@@ -71,6 +71,13 @@
                 <textarea rows="10" class="form-control" id="name" placeholder="Write a backstory for the character" name="backstory" [(ngModel)]="character.characterBackstory"></textarea>
               </div>
           </div>
+          <div class="titlebar clearfix">
+              <div class="leftcontent">
+                  <h4 class="">Add this character to a campaign</h4>
+                  <p>Ask fo the campaign ID from the owner</p>
+                  <input class="campaignInput" type="text" class="form-control" id="level" placeholder="" name="level" [(ngModel)]="character.campaignId">
+              </div>
+          </div>
       </form>
   </a>
 </div>

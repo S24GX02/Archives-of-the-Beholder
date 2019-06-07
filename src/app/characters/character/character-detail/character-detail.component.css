@@ -1,0 +1,253 @@
+h4{
+    color: #fff;
+    font-family: 'montserratbold';
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.campaignInput{
+    display: inline;
+}
+
+.btn-custom{
+    color: #fff;
+    text-transform: uppercase;
+    background-color:#323232;
+    padding: 15px 30px;
+    font-family: 'montserratbold';
+    border-radius: 0px;
+}
+
+.btn-custom:hover{
+    color: #323232;
+    text-transform: uppercase;
+    background-color:#D8923B;
+    padding: 15px 30px;
+    font-family: 'montserratbold';
+    -webkit-transition: 0.25s;
+}
+
+textarea:focus, select:focus, input:focus{
+    border-radius: 0px;
+    border-bottom: 3px solid #d8923b;
+    box-shadow: none;
+    -webkit-transition: 0.25s;
+}
+
+textarea, input{
+    border-radius: 0px;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid #646464;
+    font-family: 'montserratlight';
+    color: #fff;
+}
+
+
+select{
+    border-radius: 0px;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid #646464;
+    font-family: 'montserratlight';
+    color: #646464;
+}
+
+
+
+label{
+    color: #fff;
+    font-family: 'montserratbold';
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+h3{
+    font-family: 'my_fontregular';
+    margin-bottom: 25px;
+    color: #fff;
+    display: inline-block;
+}
+
+p{
+    color: #D8923B;
+    font-family: 'montserratlight';
+}
+
+.leftcontent{
+    float: left;
+    width: 30%;
+    padding: 5px 5px;
+}
+
+.rightcontent{
+    padding: 15px 15px;
+    float: right;
+}
+
+.middlecontent{
+    margin: auto;
+    padding: 5px 5px;
+    width: 30%;
+    display: inline-block;
+}
+
+.content{
+    background-color: #323232;
+    padding: 20px 15px;
+}
+
+.titlebar{
+    background-color: #3E3E3E;
+    padding: 15px 20px;
+}
+
+.whitetext{
+    color: #fff;
+}
+
+.contentwrapper-detail{
+    display: inline-block;
+    margin: 30px 25px 25px 50px;
+    width: 93%;
+}
+
+.contentwrapper-notes{
+    display: inline-block;
+    margin: 15px 15px 0px 0px;
+}
+
+.itemwrapper{
+    background-color: #323232;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+}
+
+h5{
+    color: #fff;
+    font-family: 'montserratbold';
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+h3{
+    font-family: 'my_fontregular';
+    margin-bottom: 25px;
+    color: #fff;
+    display: inline-block;
+}
+
+p{
+    color: #D8923B;
+    font-family: 'montserratlight';
+}
+
+
+.plusicon{
+    width: 35px;
+    color: #D8923B;
+    display: inline-block;
+    float: right;
+    margin: 15px 0;
+}
+
+.whitetext{
+    color: #fff;
+    margin-top: 15px;
+}
+
+.itemwrapper{
+    background-color: #3E3E3E;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin-bottom: 25px;
+    
+   
+    display: inline-block;
+}
+
+.titlebar{
+    background-color: #3E3E3E;
+    padding: 15px 20px;
+
+}
+
+.content{
+    background-color: #323232;
+    padding: 20px 30px;
+}
+
+.left{
+    float: left;
+    text-align: left;
+}
+
+.right{
+    float: right;
+    text-align: right
+}
+
+.rightcontent{
+    padding: 5px 5px;
+    width: auto;
+    float: right;
+    text-align: right;
+    display: inline-block;
+
+}
+
+.leftcontent{
+    float: left;
+    display: inline-block;
+    padding: 5px 5px;
+    width: 33%;
+}
+
+.btn-custom-delete{
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #323232;
+    padding: 15px 30px;
+    font-family: 'montserratbold';
+    border-radius: 0px;
+}
+
+.btn-custom-delete:hover{
+    color: #fff;
+    text-transform: uppercase;
+    background-color:#a80f0f;
+    padding: 15px 30px;
+    font-family: 'montserratbold';
+    -webkit-transition: 0.25s;
+}
+
+.btn-custom{
+    color: #fff;
+    text-transform: uppercase;
+    background-color:#323232;
+    padding: 15px 30px;
+    font-family: 'montserratbold';
+    border-radius: 0px;
+}
+
+.btn-addmargin{
+    margin-right: 15px;
+}
+
+.btn-custom:hover{
+    color: #323232;
+    text-transform: uppercase;
+    background-color:#D8923B;
+    padding: 15px 30px;
+    font-family: 'montserratbold';
+    -webkit-transition: 0.25s;
+}
+
+.addMargin{
+    margin: 30px 15px 0px 25px;
+}
+

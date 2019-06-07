@@ -1,11 +1,37 @@
 <div>
-  <div class="wrapperleft">
+  <div class="wrapperleft  col-xs-7">
     <div>
-      <h3>Your Characters</h3>
+      <h3>Your  Characters</h3>
       <a routerLink="new"><img src="../../../assets/icons/Plus.svg" class="plusicon"></a>
     </div>
     <div>
     <app-character-list></app-character-list>
+    </div>
+  </div>
+  <div class="wrapperright  col-xs-4">
+    <div>
+      <h3>Active  Character</h3>
+    </div>
+    <div>
+      <form (ngSubmit)="onChangeActiveChar(characterId)">
+        <div class="titlebar clearfix">
+          <h4 class="">Set your active character</h4>
+          <p class="">To switch campaigns you need to change your currently active character</p>
+        </div>
+        <div class="content">
+          <div class="form-group">
+            <label for="faction">Faction</label>
+            <select class="form-control" id="faction" name="faction" [(ngModel)]="characterId">
+            <option *ngFor="let character of characters; let i = index" [ngValue]=character.documentId>{{character.characterName}}</option>
+            <option [ngValue]=null>None</option>
+            </select>
+            <small id="factionhelp" class="form-text text-muted">Choose an active character</small>
+          </div>
+        </div>
+        <div class="rightcontent">
+            <button type="submit" value="Submit" class="btn btn-custom" name="submit">Save</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>

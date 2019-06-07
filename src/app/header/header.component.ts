@@ -3,6 +3,7 @@ import { AuthService } from '../login-and-register/services/auth.service';
 import { User } from '../login-and-register/models/user.model';
 import { UserService } from '../login-and-register/services/user.service';
 import { Observable } from 'rxjs';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-header',
@@ -14,12 +15,14 @@ export class HeaderComponent implements OnInit {
   currentLoggedInUser;
   username: string;
   user: Observable<User>;
+  title = "";
 
-  constructor(public authService: AuthService, public userService: UserService) {
+  constructor(public authService: AuthService, public userService: UserService, private titleService: Title) {
 
 }
 
   ngOnInit() {
+    this.titleService.setTitle(this.title);
     this.authService.afAuth.auth.onAuthStateChanged(user => {
       if (user) {
         this.currentLoggedInUser = user.uid;

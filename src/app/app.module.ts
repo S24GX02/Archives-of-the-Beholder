@@ -41,6 +41,7 @@ import { MainCharacterComponent } from './characters/main-character/main-charact
 import { from } from 'rxjs';
 import { CharacterListComponent } from './characters/character/character-list/character-list.component';
 import { CharacterItemComponent } from './characters/character/character-list/character-item/character-item.component';
+import { CharacterDetailComponent } from './characters/character/character-detail/character-detail.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import { CharacterItemComponent } from './characters/character/character-list/ch
     MainCharacterComponent,
     CharacterListComponent,
     CharacterItemComponent,
+    CharacterDetailComponent,
 
   ],
   imports: [
